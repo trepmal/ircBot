@@ -6,7 +6,7 @@ An open-source IRC bot written in PHP. Handles plugins, database support and cro
 Features
 --------
 
-* A full plugin system that offers an API for registering hooks within the bot. This hook system is basically the same as WordPress. Since the bot originated in my work environment, it was important that we had something for our other developers to easily contribute code to. Support for: `addAction()`, `doAction()`, `removeAction()`, `applyFilter()`, `addFilter()`, `removeFilter()`
+* A full plugin system that offers an API for registering hooks within the bot. This hook system is basically the same as WordPress. Since the bot originated in my work environment, it was important that we had something for our other developers to easily contribute code to. Support for: `add_action()`, `do_action()`, `remove_action()`, `apply_filter()`, `add_filter()`, `remove_filter()`
 * A cron-based task system that allows users to register/remove cron jobs with the bot. This is extremely useful for checking for news or status updates via RSS or APIs, etc. There are many things that we can do with this cron-based task system.
 * A streamlined, completely custom IRC framework for the sole purpose of handling IRC bots. This framework has been written based off of the needs from my original IRC bot. Previously, we used SmartIRC and after rewriting this, we eliminated unnecessary lines of code.
 * A MySQLi database wrapper for performing any sort of database interactions through plugins or cron jobs.
@@ -30,13 +30,13 @@ How to Use
 Functions
 ----------
 
-* `ircBot::sendChannelMessage()` - sends a message to the specified channel. ircBot will make sure that it is currently in this channel before trying to send this message.
-* `pluginManager::doAction()` - performs an action hook and passes the specified arguments to all registered hooks.
-* `pluginManager::addAction()` - registers your callback to the action hooks
-* `pluginManager::removeAction()` - removes a specified action
-* `pluginManager::applyFilter()` - applies all filters to specified data
-* `pluginManager::addFilter()` - registers your callback to the filter hooks
-* `pluginManager::removeFilter()` - removes a specified filter
+* `ircBot::send_channel_message()` - sends a message to the specified channel. ircBot will make sure that it is currently in this channel before trying to send this message.
+* `pluginManager::do_action()` - performs an action hook and passes the specified arguments to all registered hooks.
+* `pluginManager::add_action()` - registers your callback to the action hooks
+* `pluginManager::remove_action()` - removes a specified action
+* `pluginManager::apply_filter()` - applies all filters to specified data
+* `pluginManager::add_filter()` - registers your callback to the filter hooks
+* `pluginManager::remove_filter()` - removes a specified filter
 * `cronSystem::register()` - registers your cron job with the cron system
 * `cronSystem::remove()` - removes the specified cron job if it exists.
 * `Database::connect()` - connects to the MySQL server using the settings in your config file.

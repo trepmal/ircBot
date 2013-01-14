@@ -10,20 +10,20 @@ class DatabaseExample{
 
 	public function __construct(){
 		// setup our database before-hand
-		self::_setupDatabase();
+		self::_setup_database();
 
 		// register our hook now
-		pluginManager::addAction( 'channel-message', array( $this, 'logChannelMessage' ) );
+		Plugin_Manager::add_action( 'channel-message', array( $this, 'log_channel_message' ) );
 	}
 
-	private static function _setupDatabase(){
+	private static function _setup_database(){
 		$query = 'CREATE TABLE IF NOT EXISTS messages ( id INT(11) UNIQUE AUTO_INCREMENT, message TEXT, username VARCHAR(100), channel VARCHAR(100), timestamp INT(11) );';
 		Database::connect();
-		Database::query( $query, false, false );
+		Database::query( $query, false );
 		Database::disconnect();
 	}
 
-	public function logChannelMessage( $username = '', $channel = '', $message = '' ){
+	public function log_channel_message( $username = '', $channel = '', $message = '' ){
 		Database::connect();
 		Database::insert( 'messages', array(
 			'username' => $username,

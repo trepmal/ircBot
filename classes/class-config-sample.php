@@ -7,20 +7,22 @@
  */
 class Config{
 
-	public static $ircChannels = array( '#channel-a', '#channel-b' );
-	public static $ircServer = 'irc.freenode.net';
-	public static $ircPort = 6667;
-	public static $ircNick = 'nick';
-	public static $ircServiceName = 'ircBot-v1.0';
-	public static $ircDebug = false;
+	public static $irc_channels = array( '#channel-a', '#channel-b' );
+	public static $irc_server = 'irc.freenode.net';
+	public static $irc_port = 6667;
+	public static $irc_nick = 'nick';
+	public static $irc_service_name = 'ircBot-v1.0';
+	public static $irc_debug = false;
 
-	public static $pluginsDirectory = '/../plugins/';
+	public static $plugins_directory = '/../plugins/';
 
-	public static $dbHost = 'localhost';
-	public static $dbUsername = 'root';
-	public static $dbPassword = 'root';
-	public static $dbDatabase = 'ircBot';
+	public static $db_host = 'localhost';
+	public static $db_username = 'root';
+	public static $db_password = 'root';
+	public static $db_database = 'ircBot';
 
-	public static $defaultTimeZone = 'EST';
+	public static $default_timezone = 'EST';
+
+	public static $user_table = 'users_online';
 
 }

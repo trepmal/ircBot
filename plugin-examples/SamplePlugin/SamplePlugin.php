@@ -8,12 +8,12 @@
 class SamplePlugin{
 
 	public function __construct(){
-		pluginManager::addAction( 'channel-message', array( $this, 'checkCommands' ) );
+		Plugin_Manager::add_action( 'channel-message', array( $this, 'check_commands' ) );
 	}
 
-	public function checkCommands( $username = '', $channel = '', $message = '' ){
+	public function check_commands( $username = '', $channel = '', $message = '' ){
 		if( preg_match( '/^!test/i', $message ) ){
-			ircBot::sendChannelMessage( $channel, $username . ': ♩♫♫♩♬♪♩♫♬♩' );
+			ircBot::send_channel_message( $channel, $username . ': ♩♫♫♩♬♪♩♫♬♩' );
 		}
 	}
 }
