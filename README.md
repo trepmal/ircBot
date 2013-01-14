@@ -31,14 +31,14 @@ Functions
 ----------
 
 * `ircBot::send_channel_message()` - sends a message to the specified channel. ircBot will make sure that it is currently in this channel before trying to send this message.
-* `pluginManager::do_action()` - performs an action hook and passes the specified arguments to all registered hooks.
-* `pluginManager::add_action()` - registers your callback to the action hooks
-* `pluginManager::remove_action()` - removes a specified action
-* `pluginManager::apply_filter()` - applies all filters to specified data
-* `pluginManager::add_filter()` - registers your callback to the filter hooks
-* `pluginManager::remove_filter()` - removes a specified filter
-* `cronSystem::register()` - registers your cron job with the cron system
-* `cronSystem::remove()` - removes the specified cron job if it exists.
+* `Plugin_Manager::do_action()` - performs an action hook and passes the specified arguments to all registered hooks.
+* `Plugin_Manager::add_action()` - registers your callback to the action hooks
+* `Plugin_Manager::remove_action()` - removes a specified action
+* `Plugin_Manager::apply_filter()` - applies all filters to specified data
+* `Plugin_Manager::add_filter()` - registers your callback to the filter hooks
+* `Plugin_Manager::remove_filter()` - removes a specified filter
+* `Cron_System::register()` - registers your cron job with the cron system
+* `Cron_System::remove()` - removes the specified cron job if it exists.
 * `Database::connect()` - connects to the MySQL server using the settings in your config file.
 * `Database::disconnect()` - disconnects from the MySQL server if it was previously connected
 * `Database::query()` - performs a manual query and returns the results.
